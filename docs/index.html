@@ -1,46 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My GitHub Pages Site</title>
-    <style>
-      body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
-      header { margin-bottom: 24px; }
-      .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin: 14px 0; }
-      a { color: #0b5fff; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      footer { margin-top: 28px; font-size: 14px; color: #666; }
-      code { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>GitHub Pages (Docs Hosting)</h1>
-      <p>This is a simple static site hosted from the <code>/docs</code> folder.</p>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Documentation</title>
+  <link rel="stylesheet" href="./site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand__title">Project Documentation</div>
+      <div class="brand__subtitle">Hosted on GitHub Pages</div>
+    </div>
 
-    <section class="card">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-      </ul>
+    <div class="topbar__right">
+      <input id="search" class="search" type="search" placeholder="Search pages (e.g., PenCommand, VariableStore)..." autocomplete="off" />
+      <a class="btn" id="openRaw" href="#" target="_blank" rel="noopener">Open raw page</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navigation</div>
+        <div class="hint">
+          Tip: Use search, then press Enter. Links open inside the viewer.
+        </div>
+      </div>
+
+      <nav id="nav" class="nav"></nav>
+    </aside>
+
+    <section class="content">
+      <div class="content__bar">
+        <div class="crumbs">
+          <span class="crumbs__label">Current:</span>
+          <span id="currentTitle" class="crumbs__value">Select a page</span>
+        </div>
+
+        <div class="content__actions">
+          <button class="btn btn--ghost" id="backBtn" type="button">Back</button>
+          <button class="btn btn--ghost" id="homeBtn" type="button">Home</button>
+        </div>
+      </div>
+
+      <div class="viewer">
+        <iframe id="frame" title="Documentation Viewer" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+
+        <div id="emptyState" class="empty">
+          <div class="empty__card">
+            <h2>Documentation viewer</h2>
+            <p>
+              Select a page from the sidebar to view it here.
+              This viewer fixes broken CSS references inside your generated HTML and applies a clean theme.
+            </p>
+            <p class="small">
+              If links inside a doc don’t navigate, use the sidebar search to jump pages.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="card">
-      <h2>How to host from /docs</h2>
-      <ol>
-        <li>Create a folder named <code>docs</code> in your repo.</li>
-        <li>Put this file inside <code>docs</code> and name it <code>index.html</code>.</li>
-        <li>Go to <strong>Settings → Pages</strong>.</li>
-        <li>Set <strong>Source</strong> to <code>Deploy from a branch</code>.</li>
-        <li>Select your branch (e.g., <code>main</code>) and folder <code>/docs</code>, then save.</li>
-      </ol>
-    </section>
-
-    <footer>
-      <p>Deployed with GitHub Pages.</p>
-    </footer>
-  </body>
+  <script src="./app.js"></script>
+</body>
 </html>
