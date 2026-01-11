@@ -23,23 +23,23 @@
       .list li { margin: 4px 0; }
       .pill { display:inline-block; font-size:12px; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; background:#f6f8fa; color:#374151; margin-left:8px;}
       .hidden { display: none !important; }
+      .path { color:#666; font-size:12px; }
     </style>
   </head>
   <body>
     <header>
       <h1>BOOSE App — XML Documentation</h1>
       <p class="muted">
-        These pages are generated from your XML comments (from the uploaded zip).
-        Each link opens the corresponding HTML file inside <code>XML/Final XML Comments/</code>.
+        Links below match your GitHub Pages structure (everything directly inside <code>/docs</code>).
       </p>
     </header>
 
     <section class="card">
       <h2>Search</h2>
-      <input id="q" class="search" type="search" placeholder="Search by class/file name (e.g., PenCommand, VariableStore, ControlFlowExecutor)..." />
+      <input id="q" class="search" type="search" placeholder="Search (e.g., ElseCommand, VariableStore, BooseInterpreterFacade)..." />
       <p class="muted" style="margin-top:10px;">
         Matches: <strong id="matchCount">0</strong>
-        <span class="pill">Tip: type a class name</span>
+        <span class="pill">Search works across title + path</span>
       </p>
     </section>
 
@@ -48,152 +48,169 @@
 
       <div class="grid">
         <details data-group="Root" open>
-          <summary>Root<span class="count">(3 pages)</span></summary>
+          <summary>Root<span class="count">(3)</span></summary>
           <ul class="list">
             <li data-title="AppCanvas" data-path="AppCanvas.html">
-              <a href="./XML/Final%20XML%20Comments/AppCanvas.html">AppCanvas</a>
-              <span class="muted">(AppCanvas.html)</span>
+              <a href="./AppCanvas.html">AppCanvas</a> <span class="path">./AppCanvas.html</span>
             </li>
             <li data-title="Form1" data-path="Form1.html">
-              <a href="./XML/Final%20XML%20Comments/Form1.html">Form1</a>
-              <span class="muted">(Form1.html)</span>
+              <a href="./Form1.html">Form1</a> <span class="path">./Form1.html</span>
             </li>
             <li data-title="IAppCommand" data-path="IAppCommand.html">
-              <a href="./XML/Final%20XML%20Comments/IAppCommand.html">IAppCommand</a>
-              <span class="muted">(IAppCommand.html)</span>
+              <a href="./IAppCommand.html">IAppCommand</a> <span class="path">./IAppCommand.html</span>
             </li>
           </ul>
         </details>
 
-        <details data-group="Commands" open>
-          <summary>Commands<span class="count">(13 pages)</span></summary>
+        <details data-group="ControlFlow" open>
+          <summary>ControlFlow<span class="count">(6)</span></summary>
           <ul class="list">
-            <li data-title="AppCanvas" data-path="Commands/AppCanvas.html"><a href="./XML/Final%20XML%20Comments/Commands/AppCanvas.html">AppCanvas</a> <span class="muted">(Commands/AppCanvas.html)</span></li>
-            <li data-title="AppCommandFactory" data-path="Commands/AppCommandFactory.html"><a href="./XML/Final%20XML%20Comments/Commands/AppCommandFactory.html">AppCommandFactory</a> <span class="muted">(Commands/AppCommandFactory.html)</span></li>
-            <li data-title="CircleCommand" data-path="Commands/CircleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/CircleCommand.html">CircleCommand</a> <span class="muted">(Commands/CircleCommand.html)</span></li>
-            <li data-title="ClearCommand" data-path="Commands/ClearCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/ClearCommand.html">ClearCommand</a> <span class="muted">(Commands/ClearCommand.html)</span></li>
-            <li data-title="DrawCommand" data-path="Commands/DrawCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/DrawCommand.html">DrawCommand</a> <span class="muted">(Commands/DrawCommand.html)</span></li>
-            <li data-title="Form1" data-path="Commands/Form1.html"><a href="./XML/Final%20XML%20Comments/Commands/Form1.html">Form1</a> <span class="muted">(Commands/Form1.html)</span></li>
-            <li data-title="MoveCommand" data-path="Commands/MoveCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/MoveCommand.html">MoveCommand</a> <span class="muted">(Commands/MoveCommand.html)</span></li>
-            <li data-title="PenCommand" data-path="Commands/PenCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/PenCommand.html">PenCommand</a> <span class="muted">(Commands/PenCommand.html)</span></li>
-            <li data-title="RectangleCommand" data-path="Commands/RectangleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/RectangleCommand.html">RectangleCommand</a> <span class="muted">(Commands/RectangleCommand.html)</span></li>
-            <li data-title="ResetCommand" data-path="Commands/ResetCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/ResetCommand.html">ResetCommand</a> <span class="muted">(Commands/ResetCommand.html)</span></li>
-            <li data-title="TriangleCommand" data-path="Commands/TriangleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/TriangleCommand.html">TriangleCommand</a> <span class="muted">(Commands/TriangleCommand.html)</span></li>
-            <li data-title="UnitTesting" data-path="Commands/UnitTesting.html"><a href="./XML/Final%20XML%20Comments/Commands/UnitTesting.html">UnitTesting</a> <span class="muted">(Commands/UnitTesting.html)</span></li>
-            <li data-title="WriteCommand" data-path="Commands/WriteCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/WriteCommand.html">WriteCommand</a> <span class="muted">(Commands/WriteCommand.html)</span></li>
+            <li data-title="ElseCommand" data-path="ControlFlow/ElseCommand.html"><a href="./ControlFlow/ElseCommand.html">ElseCommand</a> <span class="path">./ControlFlow/ElseCommand.html</span></li>
+            <li data-title="ForCommand" data-path="ControlFlow/ForCommand.html"><a href="./ControlFlow/ForCommand.html">ForCommand</a> <span class="path">./ControlFlow/ForCommand.html</span></li>
+            <li data-title="IControlFlow" data-path="ControlFlow/IcontrolFlow.html"><a href="./ControlFlow/IcontrolFlow.html">IcontrolFlow</a> <span class="path">./ControlFlow/IcontrolFlow.html</span></li>
+            <li data-title="IfCommand" data-path="ControlFlow/IfCommand.html"><a href="./ControlFlow/IfCommand.html">IfCommand</a> <span class="path">./ControlFlow/IfCommand.html</span></li>
+            <li data-title="WhileCommand" data-path="ControlFlow/WhileCommand.html"><a href="./ControlFlow/WhileCommand.html">WhileCommand</a> <span class="path">./ControlFlow/WhileCommand.html</span></li>
           </ul>
         </details>
 
-        <details data-group="ControlFlow">
-          <summary>ControlFlow<span class="count">(5 pages)</span></summary>
+        <details data-group="Interpreter" open>
+          <summary>Interpreter<span class="count">(3)</span></summary>
           <ul class="list">
-            <li data-title="ControlFlowExecutor" data-path="ControlFlow/ControlFlowExecutor.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ControlFlowExecutor.html">ControlFlowExecutor</a> <span class="muted">(ControlFlow/ControlFlowExecutor.html)</span></li>
-            <li data-title="ControlFlowExpander" data-path="ControlFlow/ControlFlowExpander.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ControlFlowExpander.html">ControlFlowExpander</a> <span class="muted">(ControlFlow/ControlFlowExpander.html)</span></li>
-            <li data-title="ExpanderHelpers" data-path="ControlFlow/ExpanderHelpers.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ExpanderHelpers.html">ExpanderHelpers</a> <span class="muted">(ControlFlow/ExpanderHelpers.html)</span></li>
-            <li data-title="LoopContext" data-path="ControlFlow/LoopContext.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/LoopContext.html">LoopContext</a> <span class="muted">(ControlFlow/LoopContext.html)</span></li>
-            <li data-title="TokenReader" data-path="ControlFlow/TokenReader.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/TokenReader.html">TokenReader</a> <span class="muted">(ControlFlow/TokenReader.html)</span></li>
+            <li data-title="BooseInterpreterFacade" data-path="Interpreter/BooseInterpreterFacade.html"><a href="./Interpreter/BooseInterpreterFacade.html">BooseInterpreterFacade</a> <span class="path">./Interpreter/BooseInterpreterFacade.html</span></li>
+            <li data-title="BooseRunResults" data-path="Interpreter/BooseRunResults.html"><a href="./Interpreter/BooseRunResults.html">BooseRunResults</a> <span class="path">./Interpreter/BooseRunResults.html</span></li>
+            <li data-title="IBooseInterpreterFacade" data-path="Interpreter/IBooseInterpreterFacade.html"><a href="./Interpreter/IBooseInterpreterFacade.html">IBooseInterpreterFacade</a> <span class="path">./Interpreter/IBooseInterpreterFacade.html</span></li>
           </ul>
         </details>
 
-        <details data-group="Interpreter">
-          <summary>Interpreter<span class="count">(3 pages)</span></summary>
+        <details data-group="Methods" open>
+          <summary>Methods<span class="count">(5)</span></summary>
           <ul class="list">
-            <li data-title="BooseInterpreterFacade" data-path="Interpreter/BooseInterpreterFacade.html"><a href="./XML/Final%20XML%20Comments/Interpreter/BooseInterpreterFacade.html">BooseInterpreterFacade</a> <span class="muted">(Interpreter/BooseInterpreterFacade.html)</span></li>
-            <li data-title="IBooseInterpreterFacade" data-path="Interpreter/IBooseInterpreterFacade.html"><a href="./XML/Final%20XML%20Comments/Interpreter/IBooseInterpreterFacade.html">IBooseInterpreterFacade</a> <span class="muted">(Interpreter/IBooseInterpreterFacade.html)</span></li>
-            <li data-title="InterpreterResult" data-path="Interpreter/InterpreterResult.html"><a href="./XML/Final%20XML%20Comments/Interpreter/InterpreterResult.html">InterpreterResult</a> <span class="muted">(Interpreter/InterpreterResult.html)</span></li>
+            <li data-title="CallCommand" data-path="Methods/CallCommand.html"><a href="./Methods/CallCommand.html">CallCommand</a> <span class="path">./Methods/CallCommand.html</span></li>
+            <li data-title="EndMethodCommand" data-path="Methods/EndMethodCommand.html"><a href="./Methods/EndMethodCommand.html">EndMethodCommand</a> <span class="path">./Methods/EndMethodCommand.html</span></li>
+            <li data-title="IMethodRegistry" data-path="Methods/ImethodRegistry.html"><a href="./Methods/ImethodRegistry.html">ImethodRegistry</a> <span class="path">./Methods/ImethodRegistry.html</span></li>
+            <li data-title="MethodCommand" data-path="Methods/MethodCommand.html"><a href="./Methods/MethodCommand.html">MethodCommand</a> <span class="path">./Methods/MethodCommand.html</span></li>
+            <li data-title="MethodRegistry" data-path="Methods/MethodRegistry.html"><a href="./Methods/MethodRegistry.html">MethodRegistry</a> <span class="path">./Methods/MethodRegistry.html</span></li>
           </ul>
         </details>
 
-        <details data-group="Methods">
-          <summary>Methods<span class="count">(5 pages)</span></summary>
+        <details data-group="Processing" open>
+          <summary>Processing<span class="count">(4)</span></summary>
           <ul class="list">
-            <li data-title="MethodRegistry" data-path="Methods/MethodRegistry.html"><a href="./XML/Final%20XML%20Comments/Methods/MethodRegistry.html">MethodRegistry</a> <span class="muted">(Methods/MethodRegistry.html)</span></li>
-            <li data-title="MethodSignature" data-path="Methods/MethodSignature.html"><a href="./XML/Final%20XML%20Comments/Methods/MethodSignature.html">MethodSignature</a> <span class="muted">(Methods/MethodSignature.html)</span></li>
-            <li data-title="ParameterSpec" data-path="Methods/ParameterSpec.html"><a href="./XML/Final%20XML%20Comments/Methods/ParameterSpec.html">ParameterSpec</a> <span class="muted">(Methods/ParameterSpec.html)</span></li>
-            <li data-title="UserMethod" data-path="Methods/UserMethod.html"><a href="./XML/Final%20XML%20Comments/Methods/UserMethod.html">UserMethod</a> <span class="muted">(Methods/UserMethod.html)</span></li>
-            <li data-title="ValueCoercion" data-path="Methods/ValueCoercion.html"><a href="./XML/Final%20XML%20Comments/Methods/ValueCoercion.html">ValueCoercion</a> <span class="muted">(Methods/ValueCoercion.html)</span></li>
+            <li data-title="ControlFlowConditionEvaluator" data-path="Processing/ControlFlowConditionEvaluator.html"><a href="./Processing/ControlFlowConditionEvaluator.html">ControlFlowConditionEvaluator</a> <span class="path">./Processing/ControlFlowConditionEvaluator.html</span></li>
+            <li data-title="ControlFlowExecutor" data-path="Processing/ControlFlowExecutor.html"><a href="./Processing/ControlFlowExecutor.html">ControlFlowExecutor</a> <span class="path">./Processing/ControlFlowExecutor.html</span></li>
+            <li data-title="IControlFlowExecutor" data-path="Processing/IControlFlowExecutor.html"><a href="./Processing/IControlFlowExecutor.html">IControlFlowExecutor</a> <span class="path">./Processing/IControlFlowExecutor.html</span></li>
+            <li data-title="VariablePreprocessor" data-path="Processing/VariablePreprocessor.html"><a href="./Processing/VariablePreprocessor.html">VariablePreprocessor</a> <span class="path">./Processing/VariablePreprocessor.html</span></li>
           </ul>
         </details>
 
-        <details data-group="Processing">
-          <summary>Processing<span class="count">(4 pages)</span></summary>
+        <details data-group="Runtime" open>
+          <summary>Runtime<span class="count">(18)</span></summary>
           <ul class="list">
-            <li data-title="ProgramPreprocessor" data-path="Processing/ProgramPreprocessor.html"><a href="./XML/Final%20XML%20Comments/Processing/ProgramPreprocessor.html">ProgramPreprocessor</a> <span class="muted">(Processing/ProgramPreprocessor.html)</span></li>
-            <li data-title="ScriptLoader" data-path="Processing/ScriptLoader.html"><a href="./XML/Final%20XML%20Comments/Processing/ScriptLoader.html">ScriptLoader</a> <span class="muted">(Processing/ScriptLoader.html)</span></li>
-            <li data-title="TextSanitizer" data-path="Processing/TextSanitizer.html"><a href="./XML/Final%20XML%20Comments/Processing/TextSanitizer.html">TextSanitizer</a> <span class="muted">(Processing/TextSanitizer.html)</span></li>
-            <li data-title="VariablePreprocessor" data-path="Processing/VariablePreprocessor.html"><a href="./XML/Final%20XML%20Comments/Processing/VariablePreprocessor.html">VariablePreprocessor</a> <span class="muted">(Processing/VariablePreprocessor.html)</span></li>
+            <li data-title="BoolVariable" data-path="Runtime/BoolVariable.html"><a href="./Runtime/BoolVariable.html">BoolVariable</a> <span class="path">./Runtime/BoolVariable.html</span></li>
+            <li data-title="IMethodRegistry" data-path="Runtime/IMethodRegistry.html"><a href="./Runtime/IMethodRegistry.html">IMethodRegistry</a> <span class="path">./Runtime/IMethodRegistry.html</span></li>
+            <li data-title="IRuntimeState" data-path="Runtime/IRuntimeState.html"><a href="./Runtime/IRuntimeState.html">IRuntimeState</a> <span class="path">./Runtime/IRuntimeState.html</span></li>
+            <li data-title="IVariableStore" data-path="Runtime/IVariableStore.html"><a href="./Runtime/IVariableStore.html">IVariableStore</a> <span class="path">./Runtime/IVariableStore.html</span></li>
+            <li data-title="IntArrayVariable" data-path="Runtime/IntArrayVariable.html"><a href="./Runtime/IntArrayVariable.html">IntArrayVariable</a> <span class="path">./Runtime/IntArrayVariable.html</span></li>
+            <li data-title="IntVariable" data-path="Runtime/IntVariable.html"><a href="./Runtime/IntVariable.html">IntVariable</a> <span class="path">./Runtime/IntVariable.html</span></li>
+            <li data-title="IVariable" data-path="Runtime/Ivariable.html"><a href="./Runtime/Ivariable.html">Ivariable</a> <span class="path">./Runtime/Ivariable.html</span></li>
+            <li data-title="MethodRegistryAdapter" data-path="Runtime/MethodRegistryAdapter.html"><a href="./Runtime/MethodRegistryAdapter.html">MethodRegistryAdapter</a> <span class="path">./Runtime/MethodRegistryAdapter.html</span></li>
+            <li data-title="RealArrayVariable" data-path="Runtime/RealArrayVariable.html"><a href="./Runtime/RealArrayVariable.html">RealArrayVariable</a> <span class="path">./Runtime/RealArrayVariable.html</span></li>
+            <li data-title="RealVariable" data-path="Runtime/RealVariable.html"><a href="./Runtime/RealVariable.html">RealVariable</a> <span class="path">./Runtime/RealVariable.html</span></li>
+            <li data-title="RuntimeState" data-path="Runtime/RuntimeState.html"><a href="./Runtime/RuntimeState.html">RuntimeState</a> <span class="path">./Runtime/RuntimeState.html</span></li>
+            <li data-title="RuntimeStateAdapter" data-path="Runtime/RuntimeStateAdapter.html"><a href="./Runtime/RuntimeStateAdapter.html">RuntimeStateAdapter</a> <span class="path">./Runtime/RuntimeStateAdapter.html</span></li>
+            <li data-title="StaticMethodRegistryAdapter" data-path="Runtime/StaticMethodRegistryAdapter.html"><a href="./Runtime/StaticMethodRegistryAdapter.html">StaticMethodRegistryAdapter</a> <span class="path">./Runtime/StaticMethodRegistryAdapter.html</span></li>
+            <li data-title="StaticRuntimeStateAdapter" data-path="Runtime/StaticRuntimeStateAdapter.html"><a href="./Runtime/StaticRuntimeStateAdapter.html">StaticRuntimeStateAdapter</a> <span class="path">./Runtime/StaticRuntimeStateAdapter.html</span></li>
+            <li data-title="VariableStore" data-path="Runtime/VariableStore.html"><a href="./Runtime/VariableStore.html">VariableStore</a> <span class="path">./Runtime/VariableStore.html</span></li>
+            <li data-title="RuntimeState" data-path="Runtime/RuntimeState.html"><a href="./Runtime/RuntimeState.html">RuntimeState</a> <span class="path">./Runtime/RuntimeState.html</span></li>
           </ul>
         </details>
 
-        <details data-group="Runtime">
-          <summary>Runtime<span class="count">(15 pages)</span></summary>
+        <details data-group="TestCases" open>
+          <summary>TestCases<span class="count">(many)</span></summary>
           <ul class="list">
-            <li data-title="IArrayStore" data-path="Runtime/IArrayStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/IArrayStore.html">IArrayStore</a> <span class="muted">(Runtime/IArrayStore.html)</span></li>
-            <li data-title="IConsole" data-path="Runtime/IConsole.html"><a href="./XML/Final%20XML%20Comments/Runtime/IConsole.html">IConsole</a> <span class="muted">(Runtime/IConsole.html)</span></li>
-            <li data-title="IFileSystem" data-path="Runtime/IFileSystem.html"><a href="./XML/Final%20XML%20Comments/Runtime/IFileSystem.html">IFileSystem</a> <span class="muted">(Runtime/IFileSystem.html)</span></li>
-            <li data-title="IRuntimeContext" data-path="Runtime/IRuntimeContext.html"><a href="./XML/Final%20XML%20Comments/Runtime/IRuntimeContext.html">IRuntimeContext</a> <span class="muted">(Runtime/IRuntimeContext.html)</span></li>
-            <li data-title="IVariableStore" data-path="Runtime/IVariableStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/IVariableStore.html">IVariableStore</a> <span class="muted">(Runtime/IVariableStore.html)</span></li>
-            <li data-title="RuntimeContext" data-path="Runtime/RuntimeContext.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeContext.html">RuntimeContext</a> <span class="muted">(Runtime/RuntimeContext.html)</span></li>
-            <li data-title="RuntimeErrors" data-path="Runtime/RuntimeErrors.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeErrors.html">RuntimeErrors</a> <span class="muted">(Runtime/RuntimeErrors.html)</span></li>
-            <li data-title="RuntimeOptions" data-path="Runtime/RuntimeOptions.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeOptions.html">RuntimeOptions</a> <span class="muted">(Runtime/RuntimeOptions.html)</span></li>
-            <li data-title="SafeConsole" data-path="Runtime/SafeConsole.html"><a href="./XML/Final%20XML%20Comments/Runtime/SafeConsole.html">SafeConsole</a> <span class="muted">(Runtime/SafeConsole.html)</span></li>
-            <li data-title="VarKind" data-path="Runtime/VarKind.html"><a href="./XML/Final%20XML%20Comments/Runtime/VarKind.html">VarKind</a> <span class="muted">(Runtime/VarKind.html)</span></li>
-            <li data-title="VarValue" data-path="Runtime/VarValue.html"><a href="./XML/Final%20XML%20Comments/Runtime/VarValue.html">VarValue</a> <span class="muted">(Runtime/VarValue.html)</span></li>
-            <li data-title="VariableStore" data-path="Runtime/VariableStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/VariableStore.html">VariableStore</a> <span class="muted">(Runtime/VariableStore.html)</span></li>
-            <li data-title="WarningCollector" data-path="Runtime/WarningCollector.html"><a href="./XML/Final%20XML%20Comments/Runtime/WarningCollector.html">WarningCollector</a> <span class="muted">(Runtime/WarningCollector.html)</span></li>
-            <li data-title="WriteBuffer" data-path="Runtime/WriteBuffer.html"><a href="./XML/Final%20XML%20Comments/Runtime/WriteBuffer.html">WriteBuffer</a> <span class="muted">(Runtime/WriteBuffer.html)</span></li>
-            <li data-title="XmlDocIndex" data-path="Runtime/XmlDocIndex.html"><a href="./XML/Final%20XML%20Comments/Runtime/XmlDocIndex.html">XmlDocIndex</a> <span class="muted">(Runtime/XmlDocIndex.html)</span></li>
-          </ul>
-        </details>
+            <li data-title="AppCanvasTests" data-path="TestCases/Canvas/AppCanvasTests.html"><a href="./TestCases/Canvas/AppCanvasTests.html">AppCanvasTests</a> <span class="path">./TestCases/Canvas/AppCanvasTests.html</span></li>
 
-        <details data-group="Variables">
-          <summary>Variables<span class="count">(5 pages)</span></summary>
-          <ul class="list">
-            <li data-title="ArrayStore" data-path="Variables/ArrayStore.html"><a href="./XML/Final%20XML%20Comments/Variables/ArrayStore.html">ArrayStore</a> <span class="muted">(Variables/ArrayStore.html)</span></li>
-            <li data-title="IArrayStore" data-path="Variables/IArrayStore.html"><a href="./XML/Final%20XML%20Comments/Variables/IArrayStore.html">IArrayStore</a> <span class="muted">(Variables/IArrayStore.html)</span></li>
-            <li data-title="IVariableStore" data-path="Variables/IVariableStore.html"><a href="./XML/Final%20XML%20Comments/Variables/IVariableStore.html">IVariableStore</a> <span class="muted">(Variables/IVariableStore.html)</span></li>
-            <li data-title="VarKind" data-path="Variables/VarKind.html"><a href="./XML/Final%20XML%20Comments/Variables/VarKind.html">VarKind</a> <span class="muted">(Variables/VarKind.html)</span></li>
-            <li data-title="VariableStore" data-path="Variables/VariableStore.html"><a href="./XML/Final%20XML%20Comments/Variables/VariableStore.html">VariableStore</a> <span class="muted">(Variables/VariableStore.html)</span></li>
-          </ul>
-        </details>
+            <li data-title="CircleCommandTests" data-path="TestCases/Commands/CircleCommandTests.html"><a href="./TestCases/Commands/CircleCommandTests.html">CircleCommandTests</a> <span class="path">./TestCases/Commands/CircleCommandTests.html</span></li>
+            <li data-title="ClearCommandTests" data-path="TestCases/Commands/ClearCommandTests.html"><a href="./TestCases/Commands/ClearCommandTests.html">ClearCommandTests</a> <span class="path">./TestCases/Commands/ClearCommandTests.html</span></li>
+            <li data-title="DrawToCommandTests" data-path="TestCases/Commands/DrawToCommandTests.html"><a href="./TestCases/Commands/DrawToCommandTests.html">DrawToCommandTests</a> <span class="path">./TestCases/Commands/DrawToCommandTests.html</span></li>
+            <li data-title="MoveToCommandTests" data-path="TestCases/Commands/MoveToCommandTests.html"><a href="./TestCases/Commands/MoveToCommandTests.html">MoveToCommandTests</a> <span class="path">./TestCases/Commands/MoveToCommandTests.html</span></li>
+            <li data-title="StoredProgramExecutionTests" data-path="TestCases/Commands/StoredProgramExecutionTests.html"><a href="./TestCases/Commands/StoredProgramExecutionTests.html">StoredProgramExecutionTests</a> <span class="path">./TestCases/Commands/StoredProgramExecutionTests.html</span></li>
 
-        <details data-group="TestCases">
-          <summary>TestCases<span class="count">(19 pages)</span></summary>
-          <ul class="list">
-            <li data-title="ArrayStoreTests" data-path="TestCases/ArrayStoreTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ArrayStoreTests.html">ArrayStoreTests</a> <span class="muted">(TestCases/ArrayStoreTests.html)</span></li>
-            <li data-title="BooseInterpreterFacadeTests" data-path="TestCases/BooseInterpreterFacadeTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/BooseInterpreterFacadeTests.html">BooseInterpreterFacadeTests</a> <span class="muted">(TestCases/BooseInterpreterFacadeTests.html)</span></li>
-            <li data-title="CommandFactoryTests" data-path="TestCases/CommandFactoryTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/CommandFactoryTests.html">CommandFactoryTests</a> <span class="muted">(TestCases/CommandFactoryTests.html)</span></li>
-            <li data-title="ControlFlowExpanderTests" data-path="TestCases/ControlFlowExpanderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ControlFlowExpanderTests.html">ControlFlowExpanderTests</a> <span class="muted">(TestCases/ControlFlowExpanderTests.html)</span></li>
-            <li data-title="MethodRegistryTests" data-path="TestCases/MethodRegistryTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/MethodRegistryTests.html">MethodRegistryTests</a> <span class="muted">(TestCases/MethodRegistryTests.html)</span></li>
-            <li data-title="MoveCommandTests" data-path="TestCases/MoveCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/MoveCommandTests.html">MoveCommandTests</a> <span class="muted">(TestCases/MoveCommandTests.html)</span></li>
-            <li data-title="PenCommandTests" data-path="TestCases/PenCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/PenCommandTests.html">PenCommandTests</a> <span class="muted">(TestCases/PenCommandTests.html)</span></li>
-            <li data-title="ProgramPreprocessorTests" data-path="TestCases/ProgramPreprocessorTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ProgramPreprocessorTests.html">ProgramPreprocessorTests</a> <span class="muted">(TestCases/ProgramPreprocessorTests.html)</span></li>
-            <li data-title="RectangleCommandTests" data-path="TestCases/RectangleCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/RectangleCommandTests.html">RectangleCommandTests</a> <span class="muted">(TestCases/RectangleCommandTests.html)</span></li>
-            <li data-title="RuntimeContextTests" data-path="TestCases/RuntimeContextTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/RuntimeContextTests.html">RuntimeContextTests</a> <span class="muted">(TestCases/RuntimeContextTests.html)</span></li>
-            <li data-title="ScriptLoaderTests" data-path="TestCases/ScriptLoaderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ScriptLoaderTests.html">ScriptLoaderTests</a> <span class="muted">(TestCases/ScriptLoaderTests.html)</span></li>
-            <li data-title="TextSanitizerTests" data-path="TestCases/TextSanitizerTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TextSanitizerTests.html">TextSanitizerTests</a> <span class="muted">(TestCases/TextSanitizerTests.html)</span></li>
-            <li data-title="TokenReaderTests" data-path="TestCases/TokenReaderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TokenReaderTests.html">TokenReaderTests</a> <span class="muted">(TestCases/TokenReaderTests.html)</span></li>
-            <li data-title="TriangleCommandTests" data-path="TestCases/TriangleCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TriangleCommandTests.html">TriangleCommandTests</a> <span class="muted">(TestCases/TriangleCommandTests.html)</span></li>
-            <li data-title="VariablePreprocessorTests" data-path="TestCases/VariablePreprocessorTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/VariablePreprocessorTests.html">VariablePreprocessorTests</a> <span class="muted">(TestCases/VariablePreprocessorTests.html)</span></li>
-            <li data-title="VariableStoreTests" data-path="TestCases/VariableStoreTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/VariableStoreTests.html">VariableStoreTests</a> <span class="muted">(TestCases/VariableStoreTests.html)</span></li>
-            <li data-title="WriteBufferTests" data-path="TestCases/WriteBufferTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/WriteBufferTests.html">WriteBufferTests</a> <span class="muted">(TestCases/WriteBufferTests.html)</span></li>
-            <li data-title="WriteCommandTests" data-path="TestCases/WriteCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/WriteCommandTests.html">WriteCommandTests</a> <span class="muted">(TestCases/WriteCommandTests.html)</span></li>
-            <li data-title="XmlDocIndexTests" data-path="TestCases/XmlDocIndexTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/XmlDocIndexTests.html">XmlDocIndexTests</a> <span class="muted">(TestCases/XmlDocIndexTests.html)</span></li>
+            <li data-title="AppCommandFactoryTests" data-path="TestCases/Factory/AppCommandFactoryTests.html"><a href="./TestCases/Factory/AppCommandFactoryTests.html">AppCommandFactoryTests</a> <span class="path">./TestCases/Factory/AppCommandFactoryTests.html</span></li>
+
+            <!-- Folders with spaces MUST be URL-encoded -->
+            <li data-title="CallCommandTests (Replaced Method)" data-path="TestCases/Replaced%20Method/CallCommandTests.html">
+              <a href="./TestCases/Replaced%20Method/CallCommandTests.html">CallCommandTests (Replaced Method)</a>
+              <span class="path">./TestCases/Replaced%20Method/CallCommandTests.html</span>
+            </li>
+            <li data-title="EndMethodCommandTests (Replaced Method)" data-path="TestCases/Replaced%20Method/EndMethodCommandTests.html">
+              <a href="./TestCases/Replaced%20Method/EndMethodCommandTests.html">EndMethodCommandTests (Replaced Method)</a>
+              <span class="path">./TestCases/Replaced%20Method/EndMethodCommandTests.html</span>
+            </li>
+
+            <li data-title="ArrayDeclareCommandTests (Replaced Variables)" data-path="TestCases/Replaced%20Variables/ArrayDeclareCommandTests.html">
+              <a href="./TestCases/Replaced%20Variables/ArrayDeclareCommandTests.html">ArrayDeclareCommandTests (Replaced Variables)</a>
+              <span class="path">./TestCases/Replaced%20Variables/ArrayDeclareCommandTests.html</span>
+            </li>
+            <li data-title="BooleanDeclareCommandTests (Replaced Variables)" data-path="TestCases/Replaced%20Variables/BooleanDeclareCommandTests.html">
+              <a href="./TestCases/Replaced%20Variables/BooleanDeclareCommandTests.html">BooleanDeclareCommandTests (Replaced Variables)</a>
+              <span class="path">./TestCases/Replaced%20Variables/BooleanDeclareCommandTests.html</span>
+            </li>
+            <li data-title="IntDeclareCommandTests (Replaced Variables)" data-path="TestCases/Replaced%20Variables/IntDeclareCommandTests.html">
+              <a href="./TestCases/Replaced%20Variables/IntDeclareCommandTests.html">IntDeclareCommandTests (Replaced Variables)</a>
+              <span class="path">./TestCases/Replaced%20Variables/IntDeclareCommandTests.html</span>
+            </li>
+            <li data-title="RealDeclareCommandTests (Replaced Variables)" data-path="TestCases/Replaced%20Variables/RealDeclareCommandTests.html">
+              <a href="./TestCases/Replaced%20Variables/RealDeclareCommandTests.html">RealDeclareCommandTests (Replaced Variables)</a>
+              <span class="path">./TestCases/Replaced%20Variables/RealDeclareCommandTests.html</span>
+            </li>
+
+            <li data-title="ElseCommandTests (ReplacedControlFlow)" data-path="TestCases/ReplacedControlFlow/ElseCommandTests.html">
+              <a href="./TestCases/ReplacedControlFlow/ElseCommandTests.html">ElseCommandTests (ReplacedControlFlow)</a>
+              <span class="path">./TestCases/ReplacedControlFlow/ElseCommandTests.html</span>
+            </li>
+            <li data-title="ForCommandTests (ReplacedControlFlow)" data-path="TestCases/ReplacedControlFlow/ForCommandTests.html">
+              <a href="./TestCases/ReplacedControlFlow/ForCommandTests.html">ForCommandTests (ReplacedControlFlow)</a>
+              <span class="path">./TestCases/ReplacedControlFlow/ForCommandTests.html</span>
+            </li>
+
+            <li data-title="IntArrayVariableTests (Runtime Tests)" data-path="TestCases/Runtime/IntArrayVariableTests.html">
+              <a href="./TestCases/Runtime/IntArrayVariableTests.html">IntArrayVariableTests</a>
+              <span class="path">./TestCases/Runtime/IntArrayVariableTests.html</span>
+            </li>
+            <li data-title="RealArrayVariableTests (Runtime Tests)" data-path="TestCases/Runtime/RealArrayVariableTests.html">
+              <a href="./TestCases/Runtime/RealArrayVariableTests.html">RealArrayVariableTests</a>
+              <span class="path">./TestCases/Runtime/RealArrayVariableTests.html</span>
+            </li>
+            <li data-title="VariableStoreTests (Runtime Tests)" data-path="TestCases/Runtime/VariableStoreTests.html">
+              <a href="./TestCases/Runtime/VariableStoreTests.html">VariableStoreTests</a>
+              <span class="path">./TestCases/Runtime/VariableStoreTests.html</span>
+            </li>
+
+            <li data-title="BooseTestHelpers" data-path="TestCases/TestInfrastructure/BooseTestHelpers.html">
+              <a href="./TestCases/TestInfrastructure/BooseTestHelpers.html">BooseTestHelpers</a>
+              <span class="path">./TestCases/TestInfrastructure/BooseTestHelpers.html</span>
+            </li>
           </ul>
         </details>
       </div>
-
-      <p class="muted" style="margin-top:12px;">
-        Note: Each page may reference a <code>*_files/ContentsMerged.css</code> folder. Keep those folders alongside the HTML files for best styling.
-      </p>
     </section>
 
     <section class="card">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="./XML/Final%20XML%20Comments/">Open the docs folder</a></li>
-      </ul>
+      <h2>Most common reasons for “File not found”</h2>
+      <ol>
+        <li>
+          <strong>Folder names must match EXACTLY</strong> (case-sensitive on GitHub Pages).
+          Example: <code>IcontrolFlow.html</code> is not the same as <code>IControlFlow.html</code>.
+        </li>
+        <li>
+          <strong>Spaces in folders must be URL-encoded</strong>.
+          Example: <code>Replaced Method</code> must be linked as <code>Replaced%20Method</code>.
+        </li>
+        <li>
+          You must put <code>index.html</code> inside the same <code>/docs</code> folder you selected in GitHub Pages settings.
+        </li>
+      </ol>
     </section>
 
     <footer>
@@ -221,7 +238,7 @@
           d.classList.toggle('hidden', !anyVisible);
         });
 
-        document.getElementById('matchCount').textContent = visibleCount.toString();
+        document.getElementById('matchCount').textContent = String(visibleCount);
       }
 
       q.addEventListener('input', applyFilter);
