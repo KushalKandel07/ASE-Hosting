@@ -1,68 +1,231 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Documentation</title>
-  <link rel="stylesheet" href="./site.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand__title">Project Documentation</div>
-      <div class="brand__subtitle">Hosted on GitHub Pages</div>
-    </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BOOSE App — XML Documentation</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+      header { margin-bottom: 20px; }
+      .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 14px 0; background: #fff; }
+      a { color: #0b5fff; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      footer { margin-top: 28px; font-size: 14px; color: #666; }
+      code { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
+      .muted { color: #666; font-size: 14px; }
+      .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      @media (min-width: 900px){ .grid { grid-template-columns: 1fr 1fr; } }
+      details { border: 1px solid #eee; border-radius: 10px; padding: 10px 12px; background:#fafafa; }
+      summary { cursor: pointer; font-weight: 700; }
+      .count { font-weight: 400; color: #666; margin-left: 8px; }
+      .search { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; }
+      .list { margin: 10px 0 0; padding-left: 18px; }
+      .list li { margin: 4px 0; }
+      .pill { display:inline-block; font-size:12px; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; background:#f6f8fa; color:#374151; margin-left:8px;}
+      .hidden { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BOOSE App — XML Documentation</h1>
+      <p class="muted">
+        These pages are generated from your XML comments (from the uploaded zip).
+        Each link opens the corresponding HTML file inside <code>XML/Final XML Comments/</code>.
+      </p>
+    </header>
 
-    <div class="topbar__right">
-      <input id="search" class="search" type="search" placeholder="Search pages (e.g., PenCommand, VariableStore)..." autocomplete="off" />
-      <a class="btn" id="openRaw" href="#" target="_blank" rel="noopener">Open raw page</a>
-    </div>
-  </header>
-
-  <main class="layout">
-    <aside class="sidebar">
-      <div class="sidebar__section">
-        <div class="sidebar__title">Navigation</div>
-        <div class="hint">
-          Tip: Use search, then press Enter. Links open inside the viewer.
-        </div>
-      </div>
-
-      <nav id="nav" class="nav"></nav>
-    </aside>
-
-    <section class="content">
-      <div class="content__bar">
-        <div class="crumbs">
-          <span class="crumbs__label">Current:</span>
-          <span id="currentTitle" class="crumbs__value">Select a page</span>
-        </div>
-
-        <div class="content__actions">
-          <button class="btn btn--ghost" id="backBtn" type="button">Back</button>
-          <button class="btn btn--ghost" id="homeBtn" type="button">Home</button>
-        </div>
-      </div>
-
-      <div class="viewer">
-        <iframe id="frame" title="Documentation Viewer" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
-
-        <div id="emptyState" class="empty">
-          <div class="empty__card">
-            <h2>Documentation viewer</h2>
-            <p>
-              Select a page from the sidebar to view it here.
-              This viewer fixes broken CSS references inside your generated HTML and applies a clean theme.
-            </p>
-            <p class="small">
-              If links inside a doc don’t navigate, use the sidebar search to jump pages.
-            </p>
-          </div>
-        </div>
-      </div>
+    <section class="card">
+      <h2>Search</h2>
+      <input id="q" class="search" type="search" placeholder="Search by class/file name (e.g., PenCommand, VariableStore, ControlFlowExecutor)..." />
+      <p class="muted" style="margin-top:10px;">
+        Matches: <strong id="matchCount">0</strong>
+        <span class="pill">Tip: type a class name</span>
+      </p>
     </section>
-  </main>
 
-  <script src="./app.js"></script>
-</body>
+    <section class="card">
+      <h2>Documentation Pages</h2>
+
+      <div class="grid">
+        <details data-group="Root" open>
+          <summary>Root<span class="count">(3 pages)</span></summary>
+          <ul class="list">
+            <li data-title="AppCanvas" data-path="AppCanvas.html">
+              <a href="./XML/Final%20XML%20Comments/AppCanvas.html">AppCanvas</a>
+              <span class="muted">(AppCanvas.html)</span>
+            </li>
+            <li data-title="Form1" data-path="Form1.html">
+              <a href="./XML/Final%20XML%20Comments/Form1.html">Form1</a>
+              <span class="muted">(Form1.html)</span>
+            </li>
+            <li data-title="IAppCommand" data-path="IAppCommand.html">
+              <a href="./XML/Final%20XML%20Comments/IAppCommand.html">IAppCommand</a>
+              <span class="muted">(IAppCommand.html)</span>
+            </li>
+          </ul>
+        </details>
+
+        <details data-group="Commands" open>
+          <summary>Commands<span class="count">(13 pages)</span></summary>
+          <ul class="list">
+            <li data-title="AppCanvas" data-path="Commands/AppCanvas.html"><a href="./XML/Final%20XML%20Comments/Commands/AppCanvas.html">AppCanvas</a> <span class="muted">(Commands/AppCanvas.html)</span></li>
+            <li data-title="AppCommandFactory" data-path="Commands/AppCommandFactory.html"><a href="./XML/Final%20XML%20Comments/Commands/AppCommandFactory.html">AppCommandFactory</a> <span class="muted">(Commands/AppCommandFactory.html)</span></li>
+            <li data-title="CircleCommand" data-path="Commands/CircleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/CircleCommand.html">CircleCommand</a> <span class="muted">(Commands/CircleCommand.html)</span></li>
+            <li data-title="ClearCommand" data-path="Commands/ClearCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/ClearCommand.html">ClearCommand</a> <span class="muted">(Commands/ClearCommand.html)</span></li>
+            <li data-title="DrawCommand" data-path="Commands/DrawCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/DrawCommand.html">DrawCommand</a> <span class="muted">(Commands/DrawCommand.html)</span></li>
+            <li data-title="Form1" data-path="Commands/Form1.html"><a href="./XML/Final%20XML%20Comments/Commands/Form1.html">Form1</a> <span class="muted">(Commands/Form1.html)</span></li>
+            <li data-title="MoveCommand" data-path="Commands/MoveCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/MoveCommand.html">MoveCommand</a> <span class="muted">(Commands/MoveCommand.html)</span></li>
+            <li data-title="PenCommand" data-path="Commands/PenCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/PenCommand.html">PenCommand</a> <span class="muted">(Commands/PenCommand.html)</span></li>
+            <li data-title="RectangleCommand" data-path="Commands/RectangleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/RectangleCommand.html">RectangleCommand</a> <span class="muted">(Commands/RectangleCommand.html)</span></li>
+            <li data-title="ResetCommand" data-path="Commands/ResetCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/ResetCommand.html">ResetCommand</a> <span class="muted">(Commands/ResetCommand.html)</span></li>
+            <li data-title="TriangleCommand" data-path="Commands/TriangleCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/TriangleCommand.html">TriangleCommand</a> <span class="muted">(Commands/TriangleCommand.html)</span></li>
+            <li data-title="UnitTesting" data-path="Commands/UnitTesting.html"><a href="./XML/Final%20XML%20Comments/Commands/UnitTesting.html">UnitTesting</a> <span class="muted">(Commands/UnitTesting.html)</span></li>
+            <li data-title="WriteCommand" data-path="Commands/WriteCommand.html"><a href="./XML/Final%20XML%20Comments/Commands/WriteCommand.html">WriteCommand</a> <span class="muted">(Commands/WriteCommand.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="ControlFlow">
+          <summary>ControlFlow<span class="count">(5 pages)</span></summary>
+          <ul class="list">
+            <li data-title="ControlFlowExecutor" data-path="ControlFlow/ControlFlowExecutor.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ControlFlowExecutor.html">ControlFlowExecutor</a> <span class="muted">(ControlFlow/ControlFlowExecutor.html)</span></li>
+            <li data-title="ControlFlowExpander" data-path="ControlFlow/ControlFlowExpander.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ControlFlowExpander.html">ControlFlowExpander</a> <span class="muted">(ControlFlow/ControlFlowExpander.html)</span></li>
+            <li data-title="ExpanderHelpers" data-path="ControlFlow/ExpanderHelpers.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/ExpanderHelpers.html">ExpanderHelpers</a> <span class="muted">(ControlFlow/ExpanderHelpers.html)</span></li>
+            <li data-title="LoopContext" data-path="ControlFlow/LoopContext.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/LoopContext.html">LoopContext</a> <span class="muted">(ControlFlow/LoopContext.html)</span></li>
+            <li data-title="TokenReader" data-path="ControlFlow/TokenReader.html"><a href="./XML/Final%20XML%20Comments/ControlFlow/TokenReader.html">TokenReader</a> <span class="muted">(ControlFlow/TokenReader.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="Interpreter">
+          <summary>Interpreter<span class="count">(3 pages)</span></summary>
+          <ul class="list">
+            <li data-title="BooseInterpreterFacade" data-path="Interpreter/BooseInterpreterFacade.html"><a href="./XML/Final%20XML%20Comments/Interpreter/BooseInterpreterFacade.html">BooseInterpreterFacade</a> <span class="muted">(Interpreter/BooseInterpreterFacade.html)</span></li>
+            <li data-title="IBooseInterpreterFacade" data-path="Interpreter/IBooseInterpreterFacade.html"><a href="./XML/Final%20XML%20Comments/Interpreter/IBooseInterpreterFacade.html">IBooseInterpreterFacade</a> <span class="muted">(Interpreter/IBooseInterpreterFacade.html)</span></li>
+            <li data-title="InterpreterResult" data-path="Interpreter/InterpreterResult.html"><a href="./XML/Final%20XML%20Comments/Interpreter/InterpreterResult.html">InterpreterResult</a> <span class="muted">(Interpreter/InterpreterResult.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="Methods">
+          <summary>Methods<span class="count">(5 pages)</span></summary>
+          <ul class="list">
+            <li data-title="MethodRegistry" data-path="Methods/MethodRegistry.html"><a href="./XML/Final%20XML%20Comments/Methods/MethodRegistry.html">MethodRegistry</a> <span class="muted">(Methods/MethodRegistry.html)</span></li>
+            <li data-title="MethodSignature" data-path="Methods/MethodSignature.html"><a href="./XML/Final%20XML%20Comments/Methods/MethodSignature.html">MethodSignature</a> <span class="muted">(Methods/MethodSignature.html)</span></li>
+            <li data-title="ParameterSpec" data-path="Methods/ParameterSpec.html"><a href="./XML/Final%20XML%20Comments/Methods/ParameterSpec.html">ParameterSpec</a> <span class="muted">(Methods/ParameterSpec.html)</span></li>
+            <li data-title="UserMethod" data-path="Methods/UserMethod.html"><a href="./XML/Final%20XML%20Comments/Methods/UserMethod.html">UserMethod</a> <span class="muted">(Methods/UserMethod.html)</span></li>
+            <li data-title="ValueCoercion" data-path="Methods/ValueCoercion.html"><a href="./XML/Final%20XML%20Comments/Methods/ValueCoercion.html">ValueCoercion</a> <span class="muted">(Methods/ValueCoercion.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="Processing">
+          <summary>Processing<span class="count">(4 pages)</span></summary>
+          <ul class="list">
+            <li data-title="ProgramPreprocessor" data-path="Processing/ProgramPreprocessor.html"><a href="./XML/Final%20XML%20Comments/Processing/ProgramPreprocessor.html">ProgramPreprocessor</a> <span class="muted">(Processing/ProgramPreprocessor.html)</span></li>
+            <li data-title="ScriptLoader" data-path="Processing/ScriptLoader.html"><a href="./XML/Final%20XML%20Comments/Processing/ScriptLoader.html">ScriptLoader</a> <span class="muted">(Processing/ScriptLoader.html)</span></li>
+            <li data-title="TextSanitizer" data-path="Processing/TextSanitizer.html"><a href="./XML/Final%20XML%20Comments/Processing/TextSanitizer.html">TextSanitizer</a> <span class="muted">(Processing/TextSanitizer.html)</span></li>
+            <li data-title="VariablePreprocessor" data-path="Processing/VariablePreprocessor.html"><a href="./XML/Final%20XML%20Comments/Processing/VariablePreprocessor.html">VariablePreprocessor</a> <span class="muted">(Processing/VariablePreprocessor.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="Runtime">
+          <summary>Runtime<span class="count">(15 pages)</span></summary>
+          <ul class="list">
+            <li data-title="IArrayStore" data-path="Runtime/IArrayStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/IArrayStore.html">IArrayStore</a> <span class="muted">(Runtime/IArrayStore.html)</span></li>
+            <li data-title="IConsole" data-path="Runtime/IConsole.html"><a href="./XML/Final%20XML%20Comments/Runtime/IConsole.html">IConsole</a> <span class="muted">(Runtime/IConsole.html)</span></li>
+            <li data-title="IFileSystem" data-path="Runtime/IFileSystem.html"><a href="./XML/Final%20XML%20Comments/Runtime/IFileSystem.html">IFileSystem</a> <span class="muted">(Runtime/IFileSystem.html)</span></li>
+            <li data-title="IRuntimeContext" data-path="Runtime/IRuntimeContext.html"><a href="./XML/Final%20XML%20Comments/Runtime/IRuntimeContext.html">IRuntimeContext</a> <span class="muted">(Runtime/IRuntimeContext.html)</span></li>
+            <li data-title="IVariableStore" data-path="Runtime/IVariableStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/IVariableStore.html">IVariableStore</a> <span class="muted">(Runtime/IVariableStore.html)</span></li>
+            <li data-title="RuntimeContext" data-path="Runtime/RuntimeContext.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeContext.html">RuntimeContext</a> <span class="muted">(Runtime/RuntimeContext.html)</span></li>
+            <li data-title="RuntimeErrors" data-path="Runtime/RuntimeErrors.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeErrors.html">RuntimeErrors</a> <span class="muted">(Runtime/RuntimeErrors.html)</span></li>
+            <li data-title="RuntimeOptions" data-path="Runtime/RuntimeOptions.html"><a href="./XML/Final%20XML%20Comments/Runtime/RuntimeOptions.html">RuntimeOptions</a> <span class="muted">(Runtime/RuntimeOptions.html)</span></li>
+            <li data-title="SafeConsole" data-path="Runtime/SafeConsole.html"><a href="./XML/Final%20XML%20Comments/Runtime/SafeConsole.html">SafeConsole</a> <span class="muted">(Runtime/SafeConsole.html)</span></li>
+            <li data-title="VarKind" data-path="Runtime/VarKind.html"><a href="./XML/Final%20XML%20Comments/Runtime/VarKind.html">VarKind</a> <span class="muted">(Runtime/VarKind.html)</span></li>
+            <li data-title="VarValue" data-path="Runtime/VarValue.html"><a href="./XML/Final%20XML%20Comments/Runtime/VarValue.html">VarValue</a> <span class="muted">(Runtime/VarValue.html)</span></li>
+            <li data-title="VariableStore" data-path="Runtime/VariableStore.html"><a href="./XML/Final%20XML%20Comments/Runtime/VariableStore.html">VariableStore</a> <span class="muted">(Runtime/VariableStore.html)</span></li>
+            <li data-title="WarningCollector" data-path="Runtime/WarningCollector.html"><a href="./XML/Final%20XML%20Comments/Runtime/WarningCollector.html">WarningCollector</a> <span class="muted">(Runtime/WarningCollector.html)</span></li>
+            <li data-title="WriteBuffer" data-path="Runtime/WriteBuffer.html"><a href="./XML/Final%20XML%20Comments/Runtime/WriteBuffer.html">WriteBuffer</a> <span class="muted">(Runtime/WriteBuffer.html)</span></li>
+            <li data-title="XmlDocIndex" data-path="Runtime/XmlDocIndex.html"><a href="./XML/Final%20XML%20Comments/Runtime/XmlDocIndex.html">XmlDocIndex</a> <span class="muted">(Runtime/XmlDocIndex.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="Variables">
+          <summary>Variables<span class="count">(5 pages)</span></summary>
+          <ul class="list">
+            <li data-title="ArrayStore" data-path="Variables/ArrayStore.html"><a href="./XML/Final%20XML%20Comments/Variables/ArrayStore.html">ArrayStore</a> <span class="muted">(Variables/ArrayStore.html)</span></li>
+            <li data-title="IArrayStore" data-path="Variables/IArrayStore.html"><a href="./XML/Final%20XML%20Comments/Variables/IArrayStore.html">IArrayStore</a> <span class="muted">(Variables/IArrayStore.html)</span></li>
+            <li data-title="IVariableStore" data-path="Variables/IVariableStore.html"><a href="./XML/Final%20XML%20Comments/Variables/IVariableStore.html">IVariableStore</a> <span class="muted">(Variables/IVariableStore.html)</span></li>
+            <li data-title="VarKind" data-path="Variables/VarKind.html"><a href="./XML/Final%20XML%20Comments/Variables/VarKind.html">VarKind</a> <span class="muted">(Variables/VarKind.html)</span></li>
+            <li data-title="VariableStore" data-path="Variables/VariableStore.html"><a href="./XML/Final%20XML%20Comments/Variables/VariableStore.html">VariableStore</a> <span class="muted">(Variables/VariableStore.html)</span></li>
+          </ul>
+        </details>
+
+        <details data-group="TestCases">
+          <summary>TestCases<span class="count">(19 pages)</span></summary>
+          <ul class="list">
+            <li data-title="ArrayStoreTests" data-path="TestCases/ArrayStoreTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ArrayStoreTests.html">ArrayStoreTests</a> <span class="muted">(TestCases/ArrayStoreTests.html)</span></li>
+            <li data-title="BooseInterpreterFacadeTests" data-path="TestCases/BooseInterpreterFacadeTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/BooseInterpreterFacadeTests.html">BooseInterpreterFacadeTests</a> <span class="muted">(TestCases/BooseInterpreterFacadeTests.html)</span></li>
+            <li data-title="CommandFactoryTests" data-path="TestCases/CommandFactoryTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/CommandFactoryTests.html">CommandFactoryTests</a> <span class="muted">(TestCases/CommandFactoryTests.html)</span></li>
+            <li data-title="ControlFlowExpanderTests" data-path="TestCases/ControlFlowExpanderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ControlFlowExpanderTests.html">ControlFlowExpanderTests</a> <span class="muted">(TestCases/ControlFlowExpanderTests.html)</span></li>
+            <li data-title="MethodRegistryTests" data-path="TestCases/MethodRegistryTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/MethodRegistryTests.html">MethodRegistryTests</a> <span class="muted">(TestCases/MethodRegistryTests.html)</span></li>
+            <li data-title="MoveCommandTests" data-path="TestCases/MoveCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/MoveCommandTests.html">MoveCommandTests</a> <span class="muted">(TestCases/MoveCommandTests.html)</span></li>
+            <li data-title="PenCommandTests" data-path="TestCases/PenCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/PenCommandTests.html">PenCommandTests</a> <span class="muted">(TestCases/PenCommandTests.html)</span></li>
+            <li data-title="ProgramPreprocessorTests" data-path="TestCases/ProgramPreprocessorTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ProgramPreprocessorTests.html">ProgramPreprocessorTests</a> <span class="muted">(TestCases/ProgramPreprocessorTests.html)</span></li>
+            <li data-title="RectangleCommandTests" data-path="TestCases/RectangleCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/RectangleCommandTests.html">RectangleCommandTests</a> <span class="muted">(TestCases/RectangleCommandTests.html)</span></li>
+            <li data-title="RuntimeContextTests" data-path="TestCases/RuntimeContextTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/RuntimeContextTests.html">RuntimeContextTests</a> <span class="muted">(TestCases/RuntimeContextTests.html)</span></li>
+            <li data-title="ScriptLoaderTests" data-path="TestCases/ScriptLoaderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/ScriptLoaderTests.html">ScriptLoaderTests</a> <span class="muted">(TestCases/ScriptLoaderTests.html)</span></li>
+            <li data-title="TextSanitizerTests" data-path="TestCases/TextSanitizerTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TextSanitizerTests.html">TextSanitizerTests</a> <span class="muted">(TestCases/TextSanitizerTests.html)</span></li>
+            <li data-title="TokenReaderTests" data-path="TestCases/TokenReaderTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TokenReaderTests.html">TokenReaderTests</a> <span class="muted">(TestCases/TokenReaderTests.html)</span></li>
+            <li data-title="TriangleCommandTests" data-path="TestCases/TriangleCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/TriangleCommandTests.html">TriangleCommandTests</a> <span class="muted">(TestCases/TriangleCommandTests.html)</span></li>
+            <li data-title="VariablePreprocessorTests" data-path="TestCases/VariablePreprocessorTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/VariablePreprocessorTests.html">VariablePreprocessorTests</a> <span class="muted">(TestCases/VariablePreprocessorTests.html)</span></li>
+            <li data-title="VariableStoreTests" data-path="TestCases/VariableStoreTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/VariableStoreTests.html">VariableStoreTests</a> <span class="muted">(TestCases/VariableStoreTests.html)</span></li>
+            <li data-title="WriteBufferTests" data-path="TestCases/WriteBufferTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/WriteBufferTests.html">WriteBufferTests</a> <span class="muted">(TestCases/WriteBufferTests.html)</span></li>
+            <li data-title="WriteCommandTests" data-path="TestCases/WriteCommandTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/WriteCommandTests.html">WriteCommandTests</a> <span class="muted">(TestCases/WriteCommandTests.html)</span></li>
+            <li data-title="XmlDocIndexTests" data-path="TestCases/XmlDocIndexTests.html"><a href="./XML/Final%20XML%20Comments/TestCases/XmlDocIndexTests.html">XmlDocIndexTests</a> <span class="muted">(TestCases/XmlDocIndexTests.html)</span></li>
+          </ul>
+        </details>
+      </div>
+
+      <p class="muted" style="margin-top:12px;">
+        Note: Each page may reference a <code>*_files/ContentsMerged.css</code> folder. Keep those folders alongside the HTML files for best styling.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./XML/Final%20XML%20Comments/">Open the docs folder</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Deployed with GitHub Pages.</p>
+    </footer>
+
+    <script>
+      const q = document.getElementById('q');
+      const items = Array.from(document.querySelectorAll('[data-title]'));
+      const groups = Array.from(document.querySelectorAll('details[data-group]'));
+
+      function applyFilter(){
+        const s = (q.value || '').trim().toLowerCase();
+        let visibleCount = 0;
+
+        items.forEach(li => {
+          const hay = (li.dataset.title + ' ' + li.dataset.path).toLowerCase();
+          const ok = !s || hay.includes(s);
+          li.classList.toggle('hidden', !ok);
+          if (ok) visibleCount++;
+        });
+
+        groups.forEach(d => {
+          const anyVisible = d.querySelectorAll('li:not(.hidden)').length > 0;
+          d.classList.toggle('hidden', !anyVisible);
+        });
+
+        document.getElementById('matchCount').textContent = visibleCount.toString();
+      }
+
+      q.addEventListener('input', applyFilter);
+      applyFilter();
+    </script>
+  </body>
 </html>
