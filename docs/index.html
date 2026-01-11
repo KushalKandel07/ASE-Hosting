@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My GitHub Pages Site</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+      header { margin-bottom: 24px; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin: 14px 0; }
+      a { color: #0b5fff; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      footer { margin-top: 28px; font-size: 14px; color: #666; }
+      code { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>GitHub Pages (Docs Hosting)</h1>
+      <p>This is a simple static site hosted from the <code>/docs</code> folder.</p>
+    </header>
+
+    <section class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>How to host from /docs</h2>
+      <ol>
+        <li>Create a folder named <code>docs</code> in your repo.</li>
+        <li>Put this file inside <code>docs</code> and name it <code>index.html</code>.</li>
+        <li>Go to <strong>Settings → Pages</strong>.</li>
+        <li>Set <strong>Source</strong> to <code>Deploy from a branch</code>.</li>
+        <li>Select your branch (e.g., <code>main</code>) and folder <code>/docs</code>, then save.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <p>Deployed with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
