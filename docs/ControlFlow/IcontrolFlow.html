@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\Kushal\AppData\Roaming\DocPreview\1.6.2.0\css/ContentsMerged.css" />
+    <title>Class GenericClass</title>
+</head>
+<body><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Interface IControlFlowCommand</div>
+    <div id="Contents" />
+
+    
+ Defines the contract for multi-line BOOSE control-flow commands.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\Kushal\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public interface IControlFlowCommand</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\Kushal\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Remarks
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+
+ This interface is implemented by replaced/unrestricted control-flow commands such as:
+ <ul><li><span class="Code">if</span></li><li><span class="Code">while</span></li><li><span class="Code">for</span></li></ul>
+
+ These commands cannot be executed using the standard single-line
+ <span class="Code">Execute()</span> method. Instead, they require access to:
+ <ul><li>The full list of program lines</li><li>The current execution index</li><li>The unrestricted <a href="" >ControlFlowExecutor</a></li></ul>
+ so that nested blocks and loop bodies can be processed correctly.
+ 
+</div>
+</div>
+
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method ExecuteControlFlow</div>
+    <div id="Contents" />
+
+    
+ Executes a multi-line control-flow block.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\Kushal\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    void ExecuteControlFlow(ControlFlowExecutor executor, List&lt;string&gt; lines, ref int i)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>executor</div><div class='ParameterCommentContainer'>
+
+ The <a href="" >ControlFlowExecutor</a> responsible for executing nested blocks
+ and dispatching commands.
+ 
+</div>
+<div class='CommentParameterName'>lines</div><div class='ParameterCommentContainer'>
+
+ All lines of the BOOSE program currently being executed.
+ 
+</div>
+<div class='CommentParameterName'>i</div><div class='ParameterCommentContainer'>
+
+ Reference to the current line index.
+ Implementations must advance this index so that execution resumes
+ immediately after the corresponding <span class="Code">end</span> statement
+ (e.g., <span class="Code">end if</span>, <span class="Code">end while</span>, <span class="Code">end for</span>).
+ 
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+</p>
+</body>
+</html>
